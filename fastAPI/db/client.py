@@ -1,0 +1,5 @@
+from pymongo import MongoClient
+
+db_client = MongoClient("mongodb+srv://tomascontrerasg_db_user:tURE052ZvKDoo6qG@cluster0.qgrhph5.mongodb.net/?appName=Cluster0").curso # Aplicar "mongodb://172.30.144.1:27017/" SOLO SI TRABAJAMOS EN LOCAL, si se nos presente un problema de conexión (Timeout o Connection Refused), ya que en nuestro caso Python se está ejecutando dentro de tu "Casa de Huéspedes" (Ubuntu/WSL), no en Windows, por lo que si pymongo intenta buscar la base de datos en el localhost que tenemos como MongoCLient() (lo que haria normalmente si estuvieras programando en windows, mac o linux), no se encontraría, por lo que se recomienda usar la ip de tu "Casa de Huéspedes" (Ubuntu/WSL).
+
+# Al final de los parentesis le ponemos un . y escribimos el nombre de la base de datos que queremos usar, jamas podemos usar el nombre local en la nube, en este caso de mongo atlas debido a que los servidores restringuen los nombres de las bases de datos.
