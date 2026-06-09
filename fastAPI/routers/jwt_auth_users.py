@@ -10,8 +10,8 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_DURATION = 1 # Esto equivale a un minuto.
 SECRET = "7e3e811d8b514ccac06dc44afa1812ab8bcc128cb625a22f6456336c3e2ac13f" # Esto es la clave secreta que se usa para encriptar y desencriptar el token.
 
-router = APIRouter(prefix= "/jwt_auth_users", 
-                   tags=["jwt_auth_users"], 
+router = APIRouter(prefix= "/jwtauth", 
+                   tags=["jwtauth"], 
                    responses= {404: {"message": "No se ha encontrado el usuario."}}) # Acá definimos la ruta router de la API para que FastAPI la reconozca mediante el decorador @router.get("/users").
 
 oauth2 = OAuth2PasswordBearer(tokenUrl="login") # Definimos el tokenUrl para que FastAPI lo reconozca mediante el decorador @router.post("/login").
