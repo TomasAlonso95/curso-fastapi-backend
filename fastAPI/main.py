@@ -14,7 +14,7 @@ app.include_router(basic_auth_users.router)
 app.include_router(users_db.router) 
 @app.get("/")
 async def root():
-    return "!Hola FastAPI!"
+    return "!Hola FastAPI! Soy Samantha una la programadora de Python."
 # ==========================================
 # RECORDATORIO: ERROR 404 EN /favicon.ico
 # ==========================================
